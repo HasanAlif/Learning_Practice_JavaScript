@@ -6,7 +6,7 @@ body{
 }
 
 #main-header{
-    background-color: burlywood;
+    background-color: rgb(203, 135, 46);
     color: aliceblue;
     padding: 2rem 5%;
     text-align: center;
@@ -25,7 +25,7 @@ body{
 .btn-alt{
     background-color: transparent;
     border-color: transparent;
-    color: burlywood;
+    color: rgb(42, 208, 20);
 }
 
 .btn:hover{
@@ -110,7 +110,7 @@ body{
     margin: 1rem;
     padding: 1rem;
     width: 50%;
-    background-color: antiquewhite;
+    background-color: rgb(240, 230, 216);
     border-radius: 4px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
@@ -123,20 +123,20 @@ body{
 #game-configuration h3{
     font-size: 1.5rem;
     margin: 0.5rem 0;
-    color: burlywood;
+    color: rgb(190, 124, 38);
 }
 
 .player-symbol-x{
     font-size: 2rem;
     font-weight: bold;
-    color: coral;
+    color: rgb(236, 101, 52);
     margin: 0.5rem 0;
 }
 
 .player-symbol-o{
     font-size: 2rem;
     font-weight: bold;
-    color: rgb(222, 63, 236);
+    color: rgb(220, 16, 239);
     margin: 0.5rem 0;
 }
 
@@ -150,7 +150,7 @@ body{
     min-width: 40rem;
     margin: auto;
     padding: 1rem 2rem;
-    background-color: darkgrey;
+    background-color: rgb(129, 125, 125);
     color: aliceblue;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     border-radius: 4px;
@@ -191,11 +191,11 @@ body{
 }
 
 #game-board li:hover{
-    background-color: rgb(215, 191, 191);
+    background-color: rgb(223, 40, 40);
 }
 
 #game-board li.disabled{
-    background-color: rgb(215, 191, 191);
+    background-color: rgb(227, 65, 65);
     color: aliceblue;
     cursor: default;
 }
