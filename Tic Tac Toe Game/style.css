@@ -1,17 +1,17 @@
-body{
+body {
     margin: 0;
-    font-family: 'Open-Sans',sans-serif;
+    font-family: 'Open-Sans', sans-serif;
     color: rgb(44, 41, 44);
     background-color: azure;
-}
-
-#main-header{
+  }
+  
+  #main-header{
     background-color: rgb(203, 135, 46);
     color: aliceblue;
     padding: 2rem 5%;
     text-align: center;
 }
-
+  
 .btn{
     font: inherit;
     padding: o.5rem 1.5rem;
@@ -38,6 +38,7 @@ body{
     border-color: transparent;
 }
 
+  
 .modal{
     position: fixed;
     top: 20%;
@@ -49,50 +50,119 @@ body{
     box-shadow: 0 2px 8px rgba(0,0,0.0.2);
     display: none;
 }
-
-#backdrop{
+  
+  #backdrop {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     display: none;
-}
-
-@media(min-width:48rem){
-    .modal{
-        left:calc(50%-20rem);
-        width: 40rem;
+  }
+  
+  @media (min-width: 48rem) {
+    .modal {
+      left: calc(50% - 20rem);
+      width: 40rem;
     }
-}
+  }
 
-#config-overlay{
+  #active-game {
     text-align: center;
+    margin: 2rem 0 5rem 0; 
+    display: none;
+  }
+  
+  #game-over{
+    width: 90%;
+    min-width: 40rem;
+    margin: auto;
+    padding: 1rem 2rem;
+    background-color: rgb(129, 125, 125);
+    color: aliceblue;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border-radius: 4px;
 }
-
-#config-overlay h2{
+  
+  #game-over h2 {
+    font-size: 2.5rem;
     margin: 0.5rem 0;
-}
+  }
+  
+  #active-player-name {
+    font-weight: bold;
+    color: rgb(50, 5, 87);
+  }
+  
+  #game-board {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 6rem); 
+    grid-template-rows: repeat(3, 6rem); 
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  #game-board li {
+    background-color: rgb(207, 190, 225);
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  #game-board li:hover {
+    background-color: rgb(112, 13, 204);
+  }
+  
+  #game-board li.disabled {
+    background-color: rgb(112, 13, 204);
+    color: white;
+    cursor: default;
+  }
 
-.form-control{
+  #config-overlay {
+    text-align: center;
+  }
+  
+  #config-overlay h2 {
     margin: 0.5rem 0;
-}
-
-.form-control label{
+  }
+  
+  .form-control {
+    margin: 0.5rem 0;
+  }
+  
+  .form-control label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
-}
-
-.form-control input{
+  }
+  
+  .form-control input {
     font: inherit;
-    border: 1px solid rgb(124, 149, 171);
+    border: 1px solid rgb(204, 204, 204);
     width: 15rem;
     padding: 0.35rem;
-}
+  }
+  
+  .error label {
+    color: rgb(136, 2, 2);
+  }
+  
+  .error input {
+    border-color: rgb(136, 2, 2);
+    color:rgb(136, 2, 2);
+    background-color: rgb(253, 219, 219);
+  }
 
-#game-configuration{
+  #game-configuration{
     width: 90%;
     max-width: 40rem;
     margin: 3rem auto;
@@ -143,18 +213,10 @@ body{
 #active-game{
     text-align: center;
     margin: 2rem 0 5rem 0;
+    display: none;
 }
 
-#game-over{
-    width: 90%;
-    min-width: 40rem;
-    margin: auto;
-    padding: 1rem 2rem;
-    background-color: rgb(129, 125, 125);
-    color: aliceblue;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    border-radius: 4px;
-}
+
 
 #game-over h2{
     font-size: 2.5rem;
