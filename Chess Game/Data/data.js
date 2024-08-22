@@ -40,4 +40,5 @@ function initGame(){
     ];
 }
 
+ 
 export {initGame};
