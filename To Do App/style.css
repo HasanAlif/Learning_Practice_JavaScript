@@ -1,0 +1,143 @@
+:root{
+    --box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.hide{
+    display: none !important;
+}
+
+.wrap{
+    background-color: cornflowerblue;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.heading{
+    margin: 10px auto 40px auto;
+}
+
+.heading .title{
+    font-size: 30px;
+    color: aliceblue;
+    font-weight: 500;
+    text-align: center;
+}
+
+.heading .subtitle{
+    font-size: 20px;
+    color: aliceblue;
+    font-weight: 400;
+    text-align: center;
+}
+
+.task-manager{
+    min-width: 350px;
+    max-width: 450px;
+    margin: auto;
+}
+
+.search-box, .task-box, .message{
+    background-color: antiquewhite;
+    padding: 20px 50px;
+    border-radius: 3px;
+    margin: 20px 0px;
+}
+
+.search-box .search{
+    display: flex;
+    margin: 10px 0px;
+}
+
+.search-box input{
+    border-radius: 3px;
+    width: 100%;
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-box .reset{
+    border : 0px;
+    font-size: 24px;
+    height: 100%;
+    padding: 10px 10px;
+    cursor: pointer;
+    color: red;
+    background-color: rgb(83, 250, 130);
+    border-radius: 10px;
+
+}
+
+.task-box .tasks{
+    margin: 10px 0px;
+}
+
+.task-box li{
+    background-color: rgb(155, 155, 23);
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-box span{
+    padding: 10px;
+}
+
+.task-box .delete{
+    border : 0px;
+    font-size: 24px;
+    height: 100%;
+    padding: 10px 10px;
+    cursor: pointer;
+    color: red;
+    background-color: rgb(83, 250, 130);
+    margin: 10px 10px;
+    border-radius: 10px;
+}
+
+.task-box .add{
+    display: flex;
+    margin: 30px 0px 10px 0px;
+}
+
+.task-box input[type="text"]{
+    border-radius: 3px;
+    width: 100%;
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.task-box input[type="submit"]{
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 0px;
+}
+
+.message{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message .clear{
+    border : 0px;
+    background-color: lightgreen;
+    color: crimson;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+}
