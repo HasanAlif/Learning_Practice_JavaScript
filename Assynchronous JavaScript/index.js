@@ -110,3 +110,138 @@ const data2 = loginUser("alifalmehedihasan@gmail.com","random",(userData)=> {
 
 console.log("Finish");
 
+
+
+
+
+
+
+
+
+console.log("Start");
+
+function loginUser(email,password){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            userData = {userId: 592 , status: "success"};
+            console.log("Inside loginUser");
+            resolve(userData);
+        },2000);
+    });
+    
+}
+
+function getUserTweets(userId){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            tweetData = [{tweetId:1,content:"ABC"},{tweetId:2,content:"XYZ"}];
+            console.log("Inside getUserTweets");
+            resolve(tweetData);
+        },1000); 
+    });
+}
+
+function getTweetComments(tweetId){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            commentData = [{commentId: 1, content: "Awesome!"}];
+            console.log("Inside getTweetComments");
+            resolve(commentData);
+        },1000);
+    });
+}
+
+
+loginUser("alifalmehedihasan@gmail.com","random")
+.then(userData=>getUserTweets(userData.userId))
+.then(tweetData=>getTweetComments(tweetData[0].tweetId))
+.then(commentData=>console.log(commentData))
+.catch(error=>console.log(error));
+
+
+console.log("Finish");
+
+
+
+
+
+
+
+console.log("Start");
+
+const twitterProfile = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        userData = {userID: 592,status: "Success"};
+        console.log("Inside twitterProfile");
+        resolve(userData);
+    },2000);
+});
+
+
+const instagramProfile = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        userData = {userID: 782,status: "Success"};
+        console.log("Inside instagramProfile");
+        resolve(userData);
+    },5000);
+});
+
+Promise.all([twitterProfile,instagramProfile])
+.then(data=> console.log(data));
+
+console.log("Finish");
+
+
+
+
+
+
+
+console.log("Start");
+
+function loginUser(email,password){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            userData = {userId: 592 , status: "success"};
+            console.log("Inside loginUser");
+            resolve(userData);
+        },2000);
+    });
+    
+}
+
+function getUserTweets(userId){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            tweetData = [{tweetId:1,content:"ABC"},{tweetId:2,content:"XYZ"}];
+            console.log("Inside getUserTweets");
+            resolve(tweetData);
+        },1000); 
+    });
+}
+
+function getTweetComments(tweetId){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            commentData = [{commentId: 1, content: "Awesome!"}];
+            console.log("Inside getTweetComments");
+            resolve(commentData);
+        },1000);
+    });
+}
+
+async function displayData(){
+    try{
+        const userData = await loginUser("alifalmehedihasan@gmail.com","random");
+        const tweetData = await getUserTweets(userData.userId);
+        const commentData = await getTweetComments(tweetData[0].tweetId);
+        console.log(commentData);
+    }catch(error){
+        console.log(error);
+    }
+}
+displayData();
+
+console.log("Finish");
+
+
